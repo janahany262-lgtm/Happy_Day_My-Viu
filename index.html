@@ -1,89 +1,51 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Viu ♡ from jino</title>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<title>20 Years of Viu ♡</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 <style>
-body{margin:0; background:#FFF5F7; font-family:'Caveat', cursive; text-align:center; padding:30px 20px}
-.small{color:#9a7a85; font-size:18px; margin-bottom:5px}
-h1{font-family:'Playfair Display', serif; color:#6B3A4A; font-size:42px; margin:10px 0}
-.sub{color:#9a7a85; font-size:18px; margin-bottom:30px}
-.cards{max-width:350px; margin:0 auto}
-.card{background:white; border:2px solid #FFD1D9; border-radius:25px; padding:16px; margin:12px 0; cursor:pointer; font-size:22px; color:#6B3A4A; transition:0.2s; box-shadow:0 4px 15px rgba(201,136,150,0.1)}
-.card:hover{transform:scale(1.03); background:#FFF0F3}
-.card.active{background:#C98896; color:white; border-color:#C98896}
-.letter{display:none; background:white; padding:35px 25px; border-radius:25px; max-width:380px; margin:20px auto; box-shadow:0 15px 40px rgba(201,136,150,0.2); text-align:left; line-height:1.8; font-size:20px; color:#5a3a44}
-.back{margin-top:20px; background:#FFF5F7; border:2px solid #FFB6C1; padding:10px 25px; border-radius:20px; cursor:pointer; font-family:'Caveat'; font-size:18px; color:#6B3A4A}
-.heart{position:fixed; font-size:20px; opacity:0.15; z-index:-1}
+:root{
+--gazal:#C9A86A; /* لون الغزال */
+--berry:#5B8FB9; /* ازرق توت */
+--cream:#FFF8F0;
+}
+body{margin:0; background: linear-gradient(135deg, #F5E6C8 0%, #D6E6F5 50%, #B8D4E8 100%); min-height:100vh; font-family:'Caveat',cursive; text-align:center; padding:30px 15px}
+.header-20{font-family:'Playfair Display'; font-size:80px; color:var(--gazal); margin:0; text-shadow:2px 2px 0 #fff}
+.cake{font-size:60px; margin:10px 0}
+h1{font-family:'Playfair Display'; color:#4A3B2A; font-size:36px; margin:5px 0}
+.sub{color:#6B7B8F; font-size:20px; margin-bottom:25px}
+.grid{max-width:380px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:12px}
+.card{background:rgba(255,255,255,0.9); border:2px solid var(--gazal); border-radius:20px; padding:18px 10px; cursor:pointer; font-size:22px; color:#4A3B2A; transition:0.3s; backdrop-filter:blur(5px)}
+.card:nth-child(even){border-color:var(--berry)}
+.card:hover{transform:translateY(-4px); box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+.card span{font-size:12px; display:block; color:#8a8a8a; margin-top:4px}
+.letter{display:none; background:var(--cream); padding:25px; border-radius:25px; max-width:400px; margin:20px auto; box-shadow:0 15px 40px rgba(0,0,0,0.15); text-align:left; border:3px solid var(--gazal)}
+.letter img{width:100%; border-radius:15px; margin:15px 0}
+.letter audio, .letter video{width:100%; margin:12px 0; border-radius:12px}
+.back{background:linear-gradient(to right, var(--gazal), var(--berry)); color:white; border:none; padding:10px 25px; border-radius:20px; cursor:pointer; font-family:'Caveat'; font-size:18px}
+.tag{display:inline-block; background:var(--berry); color:white; padding:4px 12px; border-radius:20px; font-size:14px; margin-bottom:10px}
 </style>
 </head>
 <body>
 
-<p class="small">A little surprise for you...</p>
-<h1>Choose Your Surprise ♡</h1>
-<p class="sub">7 little letters from me to you, Viu.</p>
+<div class="cake">🎂</div>
+<div class="header-20">20</div>
+<h1>Happy Birthday Viu ♡</h1>
+<p class="sub">7 surprises from jino to my favorite art</p>
 
-<div class="cards" id="cards">
-<div class="card active" onclick="openLetter('l1')">jino ♥</div>
-<div class="card" onclick="openLetter('l2')">jino</div>
-<div class="card" onclick="openLetter('l3')">jino</div>
-<div class="card" onclick="openLetter('l4')">jino</div>
-<div class="card" onclick="openLetter('l5')">jino</div>
-<div class="card" onclick="openLetter('l6')">jino</div>
-<div class="card" onclick="openLetter('l7')">jino</div>
+<div class="grid" id="grid">
+<div class="card" onclick="openL('l1')">jino <span>letter #1 ♡</span></div>
+<div class="card" onclick="openL('l2')">jino <span>letter #2 ♡</span></div>
+<div class="card" onclick="openL('l3')">jino <span>letter #3 ♡</span></div>
+<div class="card" onclick="openL('l4')">jino <span>letter #4 ♡</span></div>
+<div class="card" onclick="openL('l5')">jino <span>letter #5 ♡</span></div>
+<div class="card" onclick="openL('l6')">jino <span>letter #6 ♡</span></div>
+<div class="card" onclick="openL('l7')">jino <span>letter #7 - finale</span></div>
 </div>
 
+<!-- غيري اللي جوا كل letter -->
 <div id="l1" class="letter">
-<h3 style="text-align:center">letter #1 ♡</h3>
-اكتبي هنا الرسالة الاولى لـ Viu...<br><br>
-انا بحبك اوي يا فيو وانتِ اغلى حاجة عندي.
-<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l2" class="letter">
-<h3 style="text-align:center">letter #2 ♡</h3>
-اكتبي هنا الرسالة التانية...<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l3" class="letter">
-<h3 style="text-align:center">letter #3 ♡</h3>
-اكتبي هنا الرسالة التالتة...<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l4" class="letter">
-<h3 style="text-align:center">letter #4 ♡</h3>
-اكتبي هنا الرسالة الرابعة...<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l5" class="letter">
-<h3 style="text-align:center">letter #5 ♡</h3>
-اكتبي هنا الرسالة الخامسة...<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l6" class="letter">
-<h3 style="text-align:center">letter #6 ♡</h3>
-اكتبي هنا الرسالة السادسة...<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<div id="l7" class="letter">
-<h3 style="text-align:center">letter #7 ♡</h3>
-اكتبي هنا الرسالة السابعة والاخيرة...<br><br>
-my dearest Viu, my favorite art ♡<br><br><button class="back" onclick="goBack()">← back</button>
-</div>
-
-<script>
-function openLetter(id){
-document.getElementById('cards').style.display='none';
-document.querySelectorAll('.letter').forEach(l=>l.style.display='none');
-document.getElementById(id).style.display='block';
-window.scrollTo(0,0);
-}
-function goBack(){
-document.getElementById('cards').style.display='block';
-document.querySelectorAll('.letter').forEach(l=>l.style.display='none');
-}
-</script>
-</body>
-</html>
+<span class="tag">Verse 1 / المقطع الأول</span>
+<p>Viu, the morning is quiet, / فيو، الصباحُ ساكن...<br>
