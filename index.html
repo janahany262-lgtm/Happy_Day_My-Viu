@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Viu ♡ from jino</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<style>
+body{margin:0; background:#FFF5F7; font-family:'Caveat', cursive; text-align:center; padding:30px 20px}
+.small{color:#9a7a85; font-size:18px; margin-bottom:5px}
+h1{font-family:'Playfair Display', serif; color:#6B3A4A; font-size:42px; margin:10px 0}
+.sub{color:#9a7a85; font-size:18px; margin-bottom:30px}
+.cards{max-width:350px; margin:0 auto}
+.card{background:white; border:2px solid #FFD1D9; border-radius:25px; padding:16px; margin:12px 0; cursor:pointer; font-size:22px; color:#6B3A4A; transition:0.2s; box-shadow:0 4px 15px rgba(201,136,150,0.1)}
+.card:hover{transform:scale(1.03); background:#FFF0F3}
+.card.active{background:#C98896; color:white; border-color:#C98896}
+.letter{display:none; background:white; padding:35px 25px; border-radius:25px; max-width:380px; margin:20px auto; box-shadow:0 15px 40px rgba(201,136,150,0.2); text-align:left; line-height:1.8; font-size:20px; color:#5a3a44}
+.back{margin-top:20px; background:#FFF5F7; border:2px solid #FFB6C1; padding:10px 25px; border-radius:20px; cursor:pointer; font-family:'Caveat'; font-size:18px; color:#6B3A4A}
+.heart{position:fixed; font-size:20px; opacity:0.15; z-index:-1}
+</style>
+</head>
+<body>
+
+<p class="small">A little surprise for you...</p>
+<h1>Choose Your Surprise ♡</h1>
+<p class="sub">7 little letters from me to you, Viu.</p>
+
+<div class="cards" id="cards">
+<div class="card active" onclick="openLetter('l1')">jino ♥</div>
+<div class="card" onclick="openLetter('l2')">jino</div>
+<div class="card" onclick="openLetter('l3')">jino</div>
+<div class="card" onclick="openLetter('l4')">jino</div>
+<div class="card" onclick="openLetter('l5')">jino</div>
+<div class="card" onclick="openLetter('l6')">jino</div>
+<div class="card" onclick="openLetter('l7')">jino</div>
+</div>
+
+<div id="l1" class="letter">
+<h3 style="text-align:center">letter #1 ♡</h3>
+اكتبي هنا الرسالة الاولى لـ Viu...<br><br>
+انا بحبك اوي يا فيو وانتِ اغلى حاجة عندي.
+<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l2" class="letter">
+<h3 style="text-align:center">letter #2 ♡</h3>
+اكتبي هنا الرسالة التانية...<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l3" class="letter">
+<h3 style="text-align:center">letter #3 ♡</h3>
+اكتبي هنا الرسالة التالتة...<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l4" class="letter">
+<h3 style="text-align:center">letter #4 ♡</h3>
+اكتبي هنا الرسالة الرابعة...<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l5" class="letter">
+<h3 style="text-align:center">letter #5 ♡</h3>
+اكتبي هنا الرسالة الخامسة...<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l6" class="letter">
+<h3 style="text-align:center">letter #6 ♡</h3>
+اكتبي هنا الرسالة السادسة...<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<div id="l7" class="letter">
+<h3 style="text-align:center">letter #7 ♡</h3>
+اكتبي هنا الرسالة السابعة والاخيرة...<br><br>
+my dearest Viu, my favorite art ♡<br><br><button class="back" onclick="goBack()">← back</button>
+</div>
+
+<script>
+function openLetter(id){
+document.getElementById('cards').style.display='none';
+document.querySelectorAll('.letter').forEach(l=>l.style.display='none');
+document.getElementById(id).style.display='block';
+window.scrollTo(0,0);
+}
+function goBack(){
+document.getElementById('cards').style.display='block';
+document.querySelectorAll('.letter').forEach(l=>l.style.display='none');
+}
+</script>
+</body>
+</html>
